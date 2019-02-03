@@ -1,0 +1,68 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "PortfolioGuncelle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    input[type="file"] {
+        cursor: pointer !Important;
+        font: 300 14px sans-serif;
+        color: #9e9e9e;
+    }
+
+        input[type="file"]::-webkit-file-upload-button {
+            font: 300 14px sans-serif;
+            background: #009688;
+            border: 0;
+            padding: 12px 25px;
+            cursor: pointer;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        input[type="file"]::-ms-browse {
+            font: 300 14px 'Roboto', sans-serif;
+            background: #009688;
+            border: 0;
+            padding: 12px 25px;
+            cursor: pointer;
+            color: #fff;
+            text-transform: uppercase;
+        }
+</style>
+
+<form asp-controller="Yonetim" asp-action="PortfolioGuncelle" method="post" enctype="multipart/form-data">
+
+    <center>
+        <div class="form-group col-md-6 text-center">
+            <label>Başlık</label>
+            <input class="form-control" asp-for="Title" placeholder="@Model.Title" />
+        </div>
+    </center>
+
+    <center>
+        <div class="form-group col-md-6 text-center">
+            <label>Açıklama</label>
+            <textarea class="form-control" asp-for="Description" rows="8" placeholder="@Model.Image"></textarea>
+        </div>
+    </center>
+
+    <center>
+        <div class="card col-md-6 text-center">
+            <div class="card-body">Fotoğraf<hr /><br /> <img src="~/img/@Model.Image" width="250" /> </div>
+        </div>
+    </center>
+
+    <center>
+        <div class="form-group col-md-6 text-center">
+            <label>Başlık</label>
+            <input class="form-control" type="file" name="Image" />
+        </div>
+    </center>
+
+    <center><button type="submit" class="btn btn-info"><i class="fas fa-wrench"></i> Güncelle</button></center>
+
+</form>
+
+<br />

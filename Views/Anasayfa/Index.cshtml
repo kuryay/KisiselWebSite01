@@ -1,0 +1,177 @@
+﻿@model ViewModels
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.information.NameSurname</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/theme.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html">
+                    @Model.information.NameSurname
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Anasayfa</a>
+                    </li>
+                    <li>
+                        <a href="#about">Hakkımda</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolyo</a>
+                    </li>
+                    <li>
+                        <a href="#contact">İLETİŞİM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">@Model.information.WebsiteTitle</h1>
+                        <p class="intro-text">
+                            @Model.information.WebsiteSubtitle
+                        </p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <section id="about">
+        <div class="container content-section text-center">
+            <div class="row">
+                <h2>HAKKIMDA</h2>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>
+                        @Model.information.About
+                    </p>
+                    <p>
+                        <a href="#portfolio" class="btnghost"><i class="fa fa-download"></i> Portfolyomu İncele</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Portfolio Start -->
+    <section id="portfolio">
+        <div class="gallery">
+            <h2 class="text-center">Portfolyo</h2>
+            <ul>
+                @foreach (var item in Model.portfolios)
+                {
+                    <li class="col-md-3">
+                        <a href="/Anasayfa/Detay/@item.Id">
+                            <img src="~/img/@item.Image" alt="@item.Title">
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </section>
+    <!-- Portfolio End -->
+
+    <!-- Contact Start -->
+    <section id="contact">
+        <div class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>İLETİŞİM</h2>
+                    <div>
+                        
+                        <form asp-controller="Anasayfa" asp-action="Iletisim" method="post">
+
+                            <div class="form-group">
+                                <label for="Name">Ad Soyad</label>
+                                <input class="form-control" asp-for="messages.NameSurname" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Name">Mail Adresi</label>
+                                <input class="form-control" asp-for="messages.MailAdress" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Name">Başlık</label>
+                                <input class="form-control" asp-for="messages.Title" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Name">Mesaj</label>
+                                <textarea rows="6" class="form-control" asp-for="messages.Message"></textarea>
+                            </div>
+
+                            <input type="submit" value="Mesaj Gönder" class="btn btnghost" />
+
+                        </form>
+
+                    </div>
+                    <br />
+                    <p>
+                        <i><a href="mailto:@Model.information.MailAdress" style="border-bottom:1px dashed #ccc;">@Model.information.MailAdress</a></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="container text-center">
+            <p class="credits">
+                KurYay &copy; @Model.information.NameSurname @DateTime.Now.Year
+            </p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/theme.js"></script>
+
+</body>
+</html>

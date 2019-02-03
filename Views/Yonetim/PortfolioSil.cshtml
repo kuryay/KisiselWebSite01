@@ -1,0 +1,22 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "PortfolioSil";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<center>
+
+    <form asp-controller="Yonetim" asp-action="PortfolioSil" method="post" enctype="multipart/form-data">
+        <div class="card">
+            <div class="card-body">
+                <button type="submit" class="btn btn-danger"><i class="fas fa-plus-circle"></i> Sil</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="card">
+        <div class="card-body">Fotoğraf<hr /><br /> <img src="~/img/@Model.Image" width="250" /> </div>
+    </div>
+
+</center>
+

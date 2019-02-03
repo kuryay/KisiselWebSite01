@@ -1,0 +1,64 @@
+﻿@model Messages
+@{
+    ViewData["Title"] = "MesajSil";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<center>
+
+    <form asp-controller="Yonetim" asp-action="MesajSil" method="post">
+        <div class="card">
+            <div class="card-body">
+                <button type="submit" class="btn btn-danger">Mesajı Sil</button>
+            </div>
+        </div>
+    </form>
+    <br />
+    <div class="col-md-8">
+        <center>
+            <h2 class="text-center">Gelen Mesaj</h2>
+            <hr />
+
+            <div class="card">
+                <div class="card-body">Ad Soyad<hr /><br />@Model.NameSurname</div>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <div class="card-body">Gönderilme Tarihi<hr /><br />@Model.CreatedDate</div>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <div class="card-body">Mail Adresi<hr /><br />@Model.MailAdress</div>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <div class="card-body">Başlık<hr /><br />@Model.Title</div>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <div class="card-body">Mesaj<hr /><br />@Model.Message</div>
+            </div>
+
+            <br />
+
+            <a href="/Yonetim/Mesajlar/" class="btn btn-info">Mesajlar Sayfasına Geri Dön</a>
+
+            <br />
+
+        </center>
+    </div>
+</center>
+
+<br />
+<div class="card">
+    <div class="card-title"></div>
+</div>
+

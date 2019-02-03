@@ -1,0 +1,11 @@
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\bin\Debug\netcoreapp2.0\Blog001.deps.json
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\bin\Debug\netcoreapp2.0\Blog001.runtimeconfig.json
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\bin\Debug\netcoreapp2.0\Blog001.runtimeconfig.dev.json
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\bin\Debug\netcoreapp2.0\Blog001.dll
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\obj\Debug\netcoreapp2.0\Blog001.csproj.CoreCompileInputs.cache
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\obj\Debug\netcoreapp2.0\Blog001.AssemblyInfoInputs.cache
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\obj\Debug\netcoreapp2.0\Blog001.AssemblyInfo.cs
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\bin\Debug\netcoreapp2.0\Blog001.pdb
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\obj\Debug\netcoreapp2.0\Blog001.dll
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\obj\Debug\netcoreapp2.0\Blog001.pdb
+D:\VisualStudioProjeler\2019Projeler\Blog001\Blog001\obj\Debug\netcoreapp2.0\Blog001.csprojAssemblyReference.cache

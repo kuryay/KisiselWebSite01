@@ -1,0 +1,50 @@
+﻿@model Information
+@{
+    ViewData["Title"] = "AyarlariDuzenle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Site Ayarlarini Düzenle</h2>
+<hr />
+
+<form asp-controller="Yonetim" asp-action="AyarlariDuzenle" method="post">
+
+    <center>
+        <div class="form-group col-md-4 text-center">
+            <label>Ad Soyad</label>
+            <input class="form-control" asp-for="NameSurname" placeholder="@Model.NameSurname" />
+        </div>
+    </center>
+
+    <center>
+        <div class="form-group col-md-4 text-center">
+            <label>Sitenin Ana Sayfadaki Başlığı</label>
+            <input class="form-control" asp-for="WebsiteTitle" placeholder="@Model.WebsiteTitle" />
+        </div>
+    </center>
+
+    <center>
+        <div class="form-group col-md-4 text-center">
+            <label>Sitenin Ana Sayfadaki Alt Başlığı</label>
+            <input class="form-control" asp-for="WebsiteSubtitle" placeholder="@Model.WebsiteSubtitle" />
+        </div>
+    </center>
+
+    <center>
+        <div class="form-group col-md-4 text-center">
+            <label>Sitenin Açıklama Sayfası Yazısı</label>
+            <input class="form-control" asp-for="About" placeholder="@Model.About" />
+        </div>
+    </center>
+
+    <center>
+        <div class="form-group col-md-4 text-center">
+            <label>Mail Adresiniz</label>
+            <input class="form-control" asp-for="MailAdress" placeholder="@Model.MailAdress" />
+        </div>
+    </center>
+
+    <center><button type="submit" class="btn btn-info"><i class="fas fa-wrench"></i> Site Ayarlarini Düzenle</button></center>
+
+</form>
+

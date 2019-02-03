@@ -1,0 +1,29 @@
+﻿@model Users
+@{
+    ViewData["Title"] = "KullaniciDuzenle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Kullanıcı Düzenle</h2>
+<hr />
+
+<form asp-controller="Yonetim" asp-action="KullaniciDuzenle" method="post">
+
+    <center>
+        <div class="form-group col-md-4 text-center">
+            <label>Kullanıcı Adı</label>
+            <input class="form-control" asp-for="Username" placeholder="@Model.Username" />
+        </div>
+    </center>
+
+    <center>
+        <div class="form-group col-md-4 text-center">
+            <label>Şifre</label>
+            <input class="form-control" asp-for="Password" placeholder="@Model.Password" />
+        </div>
+    </center>
+
+    <center><button type="submit" class="btn btn-info"><i class="fas fa-wrench"></i> Kullanıcı Düzenle</button></center>
+
+</form>
+

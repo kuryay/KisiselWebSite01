@@ -1,0 +1,50 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "PortfolioIncele";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<center>
+    <div class="col-md-8">
+        <center>
+            <h2 class="text-center">Portfolyo İnceleme Ekranı</h2>
+            <hr />
+
+            <div class="card">
+                <div class="card-body">Başlık<hr /><br />@Model.Title</div>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <div class="card-body">Açıklama<hr /><br />@Model.Description</div>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <div class="card-body">Oluşturulma Tarihi<hr /><br />@Model.CreatedDate</div>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <div class="card-body">Fotoğraf<hr /><br /> <img src="~/img/@Model.Image" width="250" /> </div>
+            </div>
+
+            <br />
+
+            <br />
+
+            <a href="/Yonetim/Portfolyo/" class="btn btn-info">Portfolyo Sayfasına Geri Dön</a>
+
+            <br />
+
+        </center>
+    </div>
+</center>
+
+<br />
+<div class="card">
+    <div class="card-title"></div>
+</div>
